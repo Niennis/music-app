@@ -1,8 +1,26 @@
+# App music
+
+![nextjs](https://img.shields.io/badge/nextjs-15.0.0-blue) ![react](https://img.shields.io/badge/react-18.3.1-teal) ![tailwind](https://img.shields.io/badge/tailwind-3.4.1-lightseagreen) ![mui](https://img.shields.io/badge/mui-15.0.0-darkturquoise)  
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Instalación
 
-First, run the development server:
+1. Clonar este repositorio:
+
+    ```sh
+    git clone git@github.com:Niennis/music-app.git
+    ```
+2. Navegar al directorio del proyecto:
+    ```sh
+    cd mi-app
+    ```
+3. Instalar las dependencias:
+    ```sh
+    npm install
+    ```
+
+## Para desplegar el servidor de desarrollo:
 
 ```bash
 npm run dev
@@ -14,23 +32,17 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación levanta en [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Funcionalidades
 
-## Learn More
+La aplicación consta de dos funcionalidades:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Buscar artistas musicales.** La búsqueda se realiza por artista, por lo que este campo es obligatorio. Opcionalmente puede incluirse el nombre del usuario, para validar si tiene canciones marcadas como favoritas. Estos valores se guardan en cache local.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Marcar canciones como favoritas.** Permite marcar canciones como favoritas, y guardar este valor en cache.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Despliegue en Vercel
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+La aplicación se encuentra desplegada en [Vercel Platform](https://music-app-one-alpha.vercel.app/) de los creadores de Next.js.
