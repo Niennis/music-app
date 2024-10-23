@@ -27,9 +27,10 @@ const paginationModel = { page: 0, pageSize: 5 };
 const DataTable = ({ tracks, handleClick }) => {
 
   const columns = [
-    // { field: 'trackId', headerName: 'ID', width: 10 },
-    { field: 'nombre_tema', headerName: 'Nombre canción', width: 170 },
-    { field: 'nombre_album', headerName: 'Nombre álbum', width: 250 },
+    { field: 'nombre_tema', headerName: 'Nombre canción', minWidth: 170, 
+      display: 'flex', },
+    { field: 'nombre_album', headerName: 'Nombre álbum', width: 250, 
+    display: 'flex', },
     {
       field: 'preview_url', headerName: 'Url preview', width: 250,
       renderCell: (cellValues) => {
@@ -38,7 +39,7 @@ const DataTable = ({ tracks, handleClick }) => {
     },
     { field: 'precio', headerName: 'Precio', width: 100 },
     { field: 'moneda', headerName: 'Moneda', width: 100 },
-    { field: 'fecha_lanzamiento', headerName: 'Fecha lanzamiento', width: 200 },
+    { field: 'fecha_lanzamiento', headerName: 'Fecha lanzamiento', width: 100 },
     {
       field: 'ranking', headerName: 'Favorito', width: 90,
       renderCell: (cellValues) => <FavButton cellValues={cellValues} handleClick={() => {handleClick(cellValues)}} />
@@ -46,14 +47,12 @@ const DataTable = ({ tracks, handleClick }) => {
   ];
 
   return (
-    <Paper sx={{ minHeight: '50%', height: 'min-content', width: '90vw', margin: 'auto' }}>
+    <Paper sx={{ minHeight: '20%', height: 'min-content', width: 'min-content', minWidth:'50%', margin: 'auto' }}>
       <DataGrid
-        // rows={newRows}
         rows={tracks}
         columns={columns}
         initialState={{ pagination: { paginationModel } }}
         pageSizeOptions={[5, 30]}
-        // checkboxSelection
         sx={{ border: 0 }}
         style={{ contentVisibility: 'auto' }}
       />
