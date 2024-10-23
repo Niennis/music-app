@@ -79,9 +79,9 @@ const Dashboard = () => {
 
   return (
     <>
+      <h2 className="text-4xl font-black text-center drop-shadow-[0_2px_2px_rgba(10,100,100,0.5)] self-center " >Busca tu artista favorito</h2>
       <SearchBar handleKwyDown={handleKwyDown} onInputChange={handleInputChange} />
       <UserNameInput onInputChange={handleUserName} />
-      <h2></h2>
       {data && <DataTable tracks={data} handleClick={handleClick} />}
       {/* {data && <DataTable tracks={data} />} */}
     </>
